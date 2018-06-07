@@ -1,23 +1,23 @@
 package dima;
 
 class Main {
-    private void f(){
-        System.out.println("Private");
-    }
-
-    public static void main(String[] args) {
-        Main mn = new Dima();
-        mn.f();
+    int x = 1;
+    protected int f(){
+        System.out.println("Main");
+        return x;
     }
 }
 
 class Dima extends Main{
-    public void f(){
-        System.out.println("Public");
+    int x = 2;
+    public int f(){
+        System.out.println("Dima");
+        return x;
     }
 
     public static void main(String[] args) {
         Main m = new Dima();
-//        m.f();
+        System.out.println(m.f());
+        System.out.println(m.x);
     }
 }

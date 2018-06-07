@@ -1,61 +1,64 @@
 package dima.p240;
 
 class Cycle {
-    String s;
+    private String s;
     Cycle(String s) {
         this.s = s;
+        System.out.println(this);
     }
     @Override
     public String toString() {
         return "class "+s;
     }
 
-    int wheels() {
-        return 0;
+    int wheels(int wheels) {
+        return wheels;
     }
 }
 
 class Unicycle extends Cycle {
-    int wheels = 1;
-    Unicycle(){
-        super("Unicycle");
-        System.out.println("Inside Unicycle Constructor");
+//    private int wheels = 1;
+    Unicycle(String s){
+        super("Cycle");
+        System.out.println("Inside "+s+" Constructor");
     }
-    int wheels() {
+    int wheels(int wheels) {
         return wheels;
     }
 }
 
 class Bicycle extends Cycle{
-    final int wheels = 2;
-    Bicycle(){
-        super("Bicycle");
-        System.out.println("Inside Bicycle Constructor");
+//    private final int wheels = 2;
+    Bicycle(String s){
+        super("Cycle");
+        System.out.println("Inside "+s+" Constructor");
     }
-    int wheels() {
+    int wheels(int wheels) {
         return wheels;
     }
 }
 
 class Tricycle extends Cycle{
-    final int wheels = 3;
-    Tricycle(){
-        super("Tricycle");
-        System.out.println("Inside Tricycle Constructor");
+//    private final int wheels = 3;
+    Tricycle(String s){
+        super("Cycle");
+        System.out.println("Inside "+s+" Constructor");
     }
-    int wheels() {
+    int wheels(int wheels) {
         return wheels;
     }
 }
 
 class PolyMain{
 
-    static void ride(Cycle c){
-        System.out.println(c.wheels());
+    private static void ride(int i, Cycle c){
+        System.out.println("count of wheels is "+c.wheels(i));
     }
+
     public static void main(String[] args) {
-        ride(new Tricycle());
-        ride(new Bicycle());
-        ride(new Unicycle());
+        Cycle c3 = new Tricycle("Tricycle");
+        ride(3, c3);
+        ride(2, new Bicycle("Bicycle"));
+        ride(1, new Unicycle("Unicycle"));
     }
 }

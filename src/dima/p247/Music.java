@@ -37,7 +37,7 @@ class Brass extends Wind {
 }
 
 class GeneradeRandom{
-    Random r = new Random();
+    private Random r = new Random();
     public Instruments gen(){
         switch(r.nextInt(6)){
             default:
@@ -52,8 +52,8 @@ class GeneradeRandom{
 }
 
 class Music {
-    static GeneradeRandom gr = new GeneradeRandom();
-    public static void tuneAll(Instruments[] in) {
+    private static GeneradeRandom gr = new GeneradeRandom();
+    private static void tuneAll(Instruments[] in) {
         for(Instruments a : in) {
             a.play(Note.MIDDLE_C);
             a.adjust();
