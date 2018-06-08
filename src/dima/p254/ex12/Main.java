@@ -31,6 +31,7 @@ class Rodent {
 
 }
 class Mouse extends Rodent{
+    Test test = new Test("Mouse");
     private String st;
     Mouse(String st) {
         super("constructeur");
