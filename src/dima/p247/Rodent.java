@@ -1,6 +1,6 @@
 package dima.p247;
 
-import java.util.Random;
+import java.util.*;
 
 class Rodent {
     private String s;
@@ -52,7 +52,7 @@ class Hamster extends Rodent{
 }
 class GenerateRandomRod {
     private Random r = new Random();
-    public Rodent gen() {
+    Rodent gen() {
         switch (r.nextInt(4)){
             default:
             case 0: return new Mouse("The Parent class Mouse");
@@ -62,18 +62,18 @@ class GenerateRandomRod {
     }
 }
 class Main {
-    private static Rodent[] rodents = new Rodent[10];
+    private static List<Rodent> rodents = new ArrayList<>();
     private static GenerateRandomRod generadeRandom = new GenerateRandomRod();
-    private static void print(Rodent[] r){
-        for(Rodent rd : r) {
-            System.out.println(rd);
-            System.out.println(rd.color());
-            rd.eat();
+    private static void print(Collection<Rodent> col){
+        for (Rodent r : col) {
+            System.out.println(r);
+            System.out.println(r.color());
+            r.eat();
         }
     }
     public static void main(String[] args) {
-        for(int i=0; i<rodents.length; i++)
-            rodents[i]=generadeRandom.gen();
+        for(int i=0; i<10; i++)
+            rodents.add(generadeRandom.gen());
         print(rodents);
     }
 }

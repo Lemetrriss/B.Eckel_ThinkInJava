@@ -1,28 +1,32 @@
 package dima;
 
-class Main {
-    int x = 1;
-    int f(){
-        System.out.println("Main");
-        return x;
-    }
-}
+import java.util.*;
 
-class Dima extends Main{
-    int x = 2;
-    int f(){
-        System.out.println("Dima");
-        return x;
+class Generator{
+    private static List<String> arr = new ArrayList<>(Arrays.asList("fgvg", "kmhu", "vrtdgcv", "ihk", "qwer", "mnb", "[poi"));
+    private static int x;
+    private static String next(){
+        String str = arr.get(x++);
+        x %= arr.size();
+        return str;
+    }
+
+    private static Collection<String> fill(Collection<String> col){
+        for (int i = 0; i < arr.size(); i++) {
+            col.add(next());
+        }
+        return col;
+    }
+
+    private static String[] fill(String[] arr){
+        for (int i = 0; i < Generator.arr.size(); i++) {
+            arr[i] = next();
+        }
+        return arr;
     }
 
     public static void main(String[] args) {
-        Main m = new Dima();
-        Dima d = new Dima();
-        System.out.println(m.f());
-        System.out.println(m.x);
-        System.out.println(m.getClass().getName()+'@'+Integer.toHexString(m.hashCode()));
-        System.out.println(m.getClass()+"@"+m.hashCode());
-        System.out.println(m.equals(d));
-        System.out.println(m==d);
+        System.out.println("Array = "+Arrays.toString(fill(new String[arr.size()])));
+        System.out.println("ArrayList = "+fill(new ArrayList<>()));
     }
 }
