@@ -1,9 +1,9 @@
 package dima.p295.dir1;
 
-import dima.p295.dir2.Interfac;
+import dima.p295.dir2.Interface;
 
 public class Outer {
-    protected class Inner implements Interfac{
+    protected class Inner implements Interface{
 
         public Inner() {}
 

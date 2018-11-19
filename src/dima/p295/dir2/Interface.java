@@ -1,5 +1,5 @@
 package dima.p295.dir2;
 
-public interface Interfac {
+public interface Interface {
     void doJob(String s);
 }
