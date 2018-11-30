@@ -6,18 +6,19 @@ public class Main {
         System.out.println(i);
     }
 
-    private Inner test(){
-        Inner in = new Inner();
-        in.printInner();
-        return in;
-    }
-
     class Inner{
+
         private String str = "private Inner var";
         private void printInner(){
             i = 10;
             print();
         }
+    }
+
+    private Inner test(){
+        Inner in = new Inner();
+        in.printInner();
+        return in;
     }
 
     public static void main(String[] args) {

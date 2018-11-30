@@ -1,9 +1,8 @@
-package dima.p297;
+package dima.p297.ex1;
 
 public class Main {
 
     public Interfaceble getInter() {
-        {
             class Inner implements Interfaceble {
 
                 @Override
@@ -12,7 +11,6 @@ public class Main {
                 }
             }
             return new Inner();
-        }
     }
 
     public static void main(String[] args) {

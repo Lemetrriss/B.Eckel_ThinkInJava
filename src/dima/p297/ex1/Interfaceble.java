@@ -1,4 +1,4 @@
-package dima.p297;
+package dima.p297.ex1;
 
 public interface Interfaceble {
     void tor();
