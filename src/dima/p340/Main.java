@@ -1,7 +1,5 @@
 package dima.p340;
 
-import dima.p295.dir2.Interfac;
-
 import java.util.*;
 
 public class Main {
