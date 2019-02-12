@@ -2,8 +2,7 @@ package dima.p310;
 
 class Cally2 extends MyIncrement {
     private int i;
-
-    void increment(){
+    private void increment1(){
         super.increment();
         i++;
         System.out.println(i);
@@ -11,7 +10,7 @@ class Cally2 extends MyIncrement {
     private class Closure implements Incrementable{
         @Override
         public void increment() {
-            Cally2.this.increment();
+            Cally2.this.increment1();
         }
     }
     Incrementable getCallBackReference(){

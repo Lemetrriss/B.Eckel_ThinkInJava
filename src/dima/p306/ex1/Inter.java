@@ -2,7 +2,7 @@ package dima.p306.ex1;
 
 interface Inter {
     void print();
-    class Inner implements Inter{
+    static class Inner implements Inter{
         private String s;
         protected Inner(String s){
             this.s = s;

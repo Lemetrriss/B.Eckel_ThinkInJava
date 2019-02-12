@@ -65,7 +65,9 @@ class Main {
     private static List<Rodent> rodents = new ArrayList<>();
     private static GenerateRandomRod generadeRandom = new GenerateRandomRod();
     private static void print(Collection<Rodent> col){
-        for (Rodent r : col) {
+        Iterator<Rodent> it = col.iterator();
+        while (it.hasNext()) {
+            Rodent r = it.next();
             System.out.println(r);
             System.out.println(r.color());
             r.eat();
