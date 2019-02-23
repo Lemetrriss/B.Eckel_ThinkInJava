@@ -1,7 +1,5 @@
 package dima.p290;
 
-import javax.swing.plaf.PanelUI;
-
 public class Outer {
     private String s;
 
