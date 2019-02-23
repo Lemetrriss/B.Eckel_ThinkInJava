@@ -5,9 +5,9 @@ import java.util.*;
 
 public class Main {
 
-    private static List<String> read(String str){
+    private static List<String> read(){
         List<String> file = new ArrayList<>();
-        File f = new File(str);
+        File f = new File("c:\\Old documents\\aaa.txt");
         try {
             BufferedReader bf = new BufferedReader(new FileReader(f));
             String line;
@@ -42,7 +42,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        count(read("c:\\Old documents\\aaa.txt"), 'a','e','i', 'o','u','y');
+        count(read(), 'a','e','i', 'o','u','y');
     }
 
 }
