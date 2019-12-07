@@ -6,19 +6,19 @@ import java.util.*;
 public class Main {
 
     private static List<String> read(){
-        List<String> file = new ArrayList<>();
-        File f = new File("c:\\Old documents\\aaa.txt");
+        List<String> list = new ArrayList<>();
+        File f = new File("d:\\java\\aaa.txt");
         try {
             BufferedReader bf = new BufferedReader(new FileReader(f));
-            String line;
+            String line = "";
             while((line = bf.readLine()) != null){
-                Collections.addAll(file, line.toLowerCase().split("\\W+"));
+                Collections.addAll(list, line.toLowerCase().split("\\W+"));
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
-        System.out.println(file);
-        return file;
+        System.out.println(list);
+        return list;
     }
 
     private static void count(List<String> list, Character...chars){
@@ -27,7 +27,6 @@ public class Main {
             int i=0;
             System.out.print("\"" + ch + "\"" + " LETTER IN: ");
             for(String s:list){
-
                 int j=0;
                 for(char c:s.toCharArray()){
                     if(ch==c){

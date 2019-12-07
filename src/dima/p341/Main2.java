@@ -1,5 +1,6 @@
 package dima.p341;
 
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.ListIterator;
 import java.util.Stack;
@@ -20,5 +21,11 @@ public class Main2 {
         System.out.println(m.lit);
         System.out.println(m.lit.get(0));
         System.out.println(1 / 2);
+//        Integer[] objects = m.lit.toArray(new Integer[0]);
+//        System.out.println(Arrays.toString(objects));
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        m.lit.forEach(System.out::print);
     }
 }

@@ -30,11 +30,25 @@ class Main{
 
     public static void main(String[] args) {
 
-        System.out.printf("%25s%n", "Array: "+Arrays.toString(fill(new String[10])));
-        System.out.printf("%25s%n", "ArrayList: "+fill(new ArrayList<>()));
-        System.out.printf("%25s%n", "LinkedList: "+fill(new LinkedList<>()));
-        System.out.printf("%25s%n", "HashSet: "+fill(new HashSet<>()));
-        System.out.printf("%25s%n", "LinkedHashSet: "+fill(new LinkedHashSet<>()));
-        System.out.printf("%25s%n", "TreeSet: "+fill(new TreeSet<>()));
+        ArrayList<String> arrayList = new ArrayList<>(Arrays.asList(nm.names));
+        ListIterator<String> stringListIterator = arrayList.listIterator();
+        while (stringListIterator.hasNext()) {
+//            System.out.print(stringListIterator.next());
+            System.out.println(stringListIterator.nextIndex());
+        }
+
+//        Collection <String> l = fill(new ArrayList<>());
+//        Iterator<String> iterator = l.iterator();
+//        while (iterator.hasNext()) {
+//            String next = iterator.next();
+//            System.out.println(next);
+//        }
+
+        System.out.printf("Array: %25s%n", Arrays.toString(fill(new String[10])));
+        System.out.printf("ArrayList: %25s%n", fill(new ArrayList<>()));
+        System.out.printf("LinkedList: %25s%n", fill(new LinkedList<>()));
+        System.out.printf("HashSet: %25s%n", fill(new HashSet<>()));
+        System.out.printf("LinkedHashSet: %25s%n", fill(new LinkedHashSet<>()));
+        System.out.printf("TreeSet: %25s%n", fill(new TreeSet<>()));
     }
 }

@@ -1,13 +1,14 @@
 package dima.p332;
 
-import com.sun.org.apache.xerces.internal.xs.StringList;
+//import com.sun.org.apache.xerces.internal.xs.StringList;
 
 import java.util.*;
 
 public class Generator2 {
     private static String[] act = new String[]{"James", "John", "Nikolas", "Antony", "Mark",};
     public static Collection<String> gen(Collection<String> col){
-        col.addAll(Arrays.asList(act));
+        Collections.addAll(col, act);
+//        col.addAll(Arrays.asList(act));
         return col;
     }
     private static Collection<String> gen(String[] strArr){
