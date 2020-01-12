@@ -1,6 +1,6 @@
 package dima.p816;
 
-import static dima.p816.TrafficLight.*;
+//import static dima.p816.TrafficLight.*;
 
 public class TrafficLightStatic {
     private TrafficLight light;
@@ -11,19 +11,23 @@ public class TrafficLightStatic {
 
     private void change(){
         switch (light) {
-            case RED -> light = GREEN;
+            case RED -> light = TrafficLight.GREEN;
 
-            case GREEN -> light = YELLOW;
+            case GREEN -> light = TrafficLight.YELLOW;
 
-            case YELLOW -> light = RED;
+            case YELLOW -> light = TrafficLight.RED;
         }
     }
 
     public static void main(String[] args) {
-        TrafficLightStatic tfs = new TrafficLightStatic(RED);
+        TrafficLightStatic tfs = new TrafficLightStatic(TrafficLight.RED);
         for (int i=0; i<7; i++){
-            System.out.println(tfs.light);
+            System.out.println(TrafficLight.values()[2].name());
+            System.out.println(tfs.light + " : " + tfs.light.getS());
             tfs.change();
         }
+        System.out.println("----------------------------------");
+        for (int j=0; j<5; j++)
+            System.out.println(TrafficLight.next());
     }
 }
